@@ -1,41 +1,68 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    nome: '',
-    email: '',
-    assunto: '',
-    mensagem: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleChange = (e) => {
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value,
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { nome, email, assunto, mensagem } = formData;
-    const whatsappMessage = `Nome: ${nome}\nEmail: ${email}\nAssunto: ${assunto}\nMensagem: ${mensagem}`;
-    const whatsappUrl = `https://wa.me/553190005016?text=${encodeURIComponent(whatsappMessage)}`;
-    window.open(whatsappUrl, '_blank');
-  }; 
+    window.location.href = `https://wa.me/553190005016?text=Olá,%20preciso%20de%20ajuda%20com%20os%20seguinte%20requisitos:%20${encodeURIComponent(
+      formData.message
+    )}`;
+  };
 
   return (
     <section id="contato" className="contact">
       <div className="container">
-        <h2>Contato</h2>
+        <h2>Entre em Contato</h2>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="nome">Nome:</label>
-          <input type="text" placeholder='Nome' id="nome" name="nome" value={formData.nome} onChange={handleChange} required />
-          <label htmlFor="email">Email:</label>
-          <input type="email" placeholder='Email' id="email" name="email" value={formData.email} onChange={handleChange} required />
-          <label htmlFor="assunto">Assunto:</label>
-          <input type="text" placeholder='Assunto' id="assunto" name="assunto" value={formData.assunto} onChange={handleChange} required />
-          <label htmlFor="mensagem">Descrição de requisitos:</label>
-          <textarea id="mensagem" placeholder='Descrição de requisitos' name="mensagem" value={formData.mensagem} onChange={handleChange} required></textarea>
+          <div className="form-group">
+            <label htmlFor="name">Nome:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Seu Nome"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">E-mail:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Seu E-mail"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="message">Descrição dos Requisitos:</label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Descreva aqui os requisitos do seu projeto..."
+              rows="4"
+              required
+            />
+          </div>
           <button type="submit">Enviar</button>
         </form>
       </div>
