@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./footer.css"
 const Footer = () => {
   return (
     <footer className="footer">
@@ -33,12 +33,12 @@ const Footer = () => {
             <h4>Contato</h4>
             <p>
               Email:{" "}
-              <a href="mailto:contato@seusite.com">contato@seusite.com</a>
+              <a href="mailto:TrezeDesenvolvimento@outlook.com">TrezeDesenvolvimento@outlook.com</a>
             </p>
             <p>
-              Telefone: <a href="tel:+5531999999999">+55 31 99999-9999</a>
+              Telefone: <a href="https://wa.me/553190005016">+55 31 9000-5016</a>
             </p>
-            <p>Endereço: Rua Exemplo, 123, Cidade, Estado</p>
+            <p>Endereço: Belo Horizonte, Minas Gerais</p>
           </div>
         </div>
         <div className="footer-bottom">

@@ -1,0 +1,109 @@
+/* Versão desktop (web) */
+.services {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .services h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333333;
+    text-align: center;
+  }
+  
+  .service-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .service-item i {
+    font-size: 2em;
+    margin-right: 20px;
+    color: #007BFF;
+  }
+  
+  .service-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333333;
+  }
+  
+  .service-item p {
+    font-size: 1.1em;
+    color: #555555;
+  }
+  
+  /* Responsividade para tablet */
+  @media (max-width: 1024px) {
+    .services {
+      padding: 30px 15px;
+    }
+  
+    .services h2 {
+      font-size: 2em;
+    }
+  
+    .service-item {
+      padding: 15px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .service-item i {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+  
+    .service-item h3 {
+      font-size: 1.3em;
+    }
+  
+    .service-item p {
+      font-size: 1em;
+    }
+  }
+  
+  /* Responsividade para mobile */
+  @media (max-width: 768px) {
+    .services {
+      padding: 20px 10px;
+    }
+  
+    .services h2 {
+      font-size: 1.8em;
+    }
+  
+    .service-item {
+      padding: 10px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .service-item i {
+      font-size: 1.5em;
+      margin-bottom: 8px;
+    }
+  
+    .service-item h3 {
+      font-size: 1.2em;
+    }
+  
+    .service-item p {
+      font-size: 0.9em;
+    }
+  }
+  

@@ -1,0 +1,134 @@
+.header {
+    background-color: #ffffff;
+    border-bottom: 2px solid #007BFF;
+    padding: 10px 20px;
+    position: relative;
+  }
+  
+  .header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .header .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .header .logo a {
+    font-size: 1.6em; /* Ajustado para dispositivos móveis */
+    color: #333333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav {
+    display: none; /* Oculto por padrão em dispositivos móveis */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    overflow: hidden; /* Adiciona rolagem automática se necessário */
+    transition: max-height 0.3s ease;
+  }
+  
+  .nav.open {
+    display: flex;
+    max-height: 500px; /* Ajuste conforme necessário */
+  }
+  
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav ul li {
+    margin: 10px 0;
+  }
+  
+  .nav ul li a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 1em;
+  }
+  
+  .nav ul li a:hover {
+    color: #007BFF;
+  }
+  
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: #333333;
+    cursor: pointer;
+    z-index: 11; /* Coloca o botão acima do menu */
+  }
+  
+  /* Styles para tamanhos maiores */
+  @media (min-width: 769px) {
+    .header .container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .header .header-content {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+  
+    .header .logo a {
+      font-size: 1.8em; /* Tamanho original para telas maiores */
+    }
+  
+    .nav {
+      display: flex;
+      flex-direction: row;
+      position: static;
+      background: none;
+      border: none;
+      box-shadow: none;
+      width: auto;
+      max-width: none;
+      overflow: visible;
+      transition: none;
+    }
+  
+    .nav ul {
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .nav ul li {
+      margin-left: 20px;
+    }
+  
+    .nav ul li a {
+      font-size: 1em;
+    }
+  
+    .menu-toggle {
+      display: none; /* Oculto em telas maiores */
+    }
+  }
+  

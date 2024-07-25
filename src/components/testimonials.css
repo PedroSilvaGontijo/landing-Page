@@ -1,0 +1,62 @@
+.testimonials {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonials h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333333;
+    text-align: center;
+  }
+  
+  .testimonial-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Ajusta a altura conforme o conteúdo */
+    min-height: 150px; /* Define uma altura mínima */
+    box-sizing: border-box; /* Inclui o padding e border no cálculo da largura e altura */
+    margin: 0 10px; /* Adiciona espaçamento horizontal entre os boxes */
+  }
+  
+  .testimonial-item p {
+    font-size: 1em;
+    color: #555555;
+    line-height: 1.4;
+    margin: 10px 0; /* Adiciona uma margem para separar o texto */
+    text-align: justify; /* Justifica o texto para uma aparência mais limpa */
+  }
+  
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slick-track {
+    display: flex;
+  }
+  
+  .slick-dots {
+    bottom: -30px; /* Ajusta a posição dos pontos de navegação */
+  }
+  
+  .slick-dots li button:before {
+    font-size: 12px; /* Ajusta o tamanho dos pontos de navegação */
+    color: #007BFF; /* Cor dos pontos de navegação */
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #0056b3; /* Cor dos pontos ativos */
+  }
+  

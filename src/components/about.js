@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./about.css"
 const About = () => (
   <section id="sobre" className="about">
     <div className="container">
@@ -16,7 +16,6 @@ const About = () => (
         expectativas, ajudando nossos clientes a alcançarem seus objetivos de
         negócio.
       </p>
-      <img src="sobre-nos.jpg" alt="Sobre Nós" />
     </div>
   </section>
 );
